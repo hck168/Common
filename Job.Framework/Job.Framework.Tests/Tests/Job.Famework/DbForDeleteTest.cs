@@ -9,6 +9,11 @@ namespace Job.Framework.Tests.Job.Famework
         [TestMethod]
         public void TestMethod1()
         {
+            /*
+             * 语句：DELETE FROM T_User WHERE Id = @Id
+             * 备注：条件为 null 则不会生成查询条件
+             */
+
             using (var dbContext = DbContext.BeginConnect())
             {
                 var result1 = dbContext.Delete("T_User").Where(new

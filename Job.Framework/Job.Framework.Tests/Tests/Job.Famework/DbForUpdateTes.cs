@@ -10,6 +10,11 @@ namespace Job.Framework.Tests.Job.Famework
         [TestMethod]
         public void TestMethod1()
         {
+            /*
+             * 语句：UPDATE T_User SET UserAccount = @UserAccount,UserPwd = @UserPwd WHERE Id = @P_Id
+             * 备注：条件为 null 则不会生成查询条件，默认加前缀 @P ，防止参数重复
+             */
+
             using (var dbContext = DbContext.BeginConnect())
             {
                 var columnData = new
