@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Framework", "Job.Framework\Job.Framework.csproj", "{E6A01077-6898-4974-B606-790B87141493}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-测试", "1-测试", "{05DD9FE2-7C8C-45FB-B6B4-EF7BF28AA42A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-框架", "2-框架", "{FA0747A7-C36A-4375-A7BF-3AE7F405D88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job.Framework.Tests", "Job.Framework.Tests\Job.Framework.Tests.csproj", "{71D37427-B2D2-4A44-8E30-45D35E914786}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.242:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Job.Framework\\Job.Framework.csproj
+		SccProjectTopLevelParentUniqueName1 = Job.Framework.sln
+		SccProjectName1 = Job.Framework
+		SccLocalPath1 = Job.Framework
+		SccProjectUniqueName2 = Job.Framework.Tests\\Job.Framework.Tests.csproj
+		SccProjectTopLevelParentUniqueName2 = Job.Framework.sln
+		SccProjectName2 = Job.Framework.Tests
+		SccLocalPath2 = Job.Framework.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6A01077-6898-4974-B606-790B87141493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A01077-6898-4974-B606-790B87141493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A01077-6898-4974-B606-790B87141493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A01077-6898-4974-B606-790B87141493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D37427-B2D2-4A44-8E30-45D35E914786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D37427-B2D2-4A44-8E30-45D35E914786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D37427-B2D2-4A44-8E30-45D35E914786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D37427-B2D2-4A44-8E30-45D35E914786}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6A01077-6898-4974-B606-790B87141493} = {FA0747A7-C36A-4375-A7BF-3AE7F405D88F}
+		{71D37427-B2D2-4A44-8E30-45D35E914786} = {05DD9FE2-7C8C-45FB-B6B4-EF7BF28AA42A}
+	EndGlobalSection
+EndGlobal

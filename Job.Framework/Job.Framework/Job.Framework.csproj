@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6A01077-6898-4974-B606-790B87141493}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Job.Framework</RootNamespace>
+    <AssemblyName>Job.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\3-励旗项目\Job.CloudOffice\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Job.Framework.Common\ConvertHelper.cs" />
+    <Compile Include="Job.Framework.Common\EnumHelper.cs" />
+    <Compile Include="Job.Framework.Common\GlobalHelper.cs" />
+    <Compile Include="Job.Framework.Common\GuidHelper.cs" />
+    <Compile Include="Job.Framework.Common\SecurityHelper.cs" />
+    <Compile Include="Job.Framework.Common\SettingHelper.cs" />
+    <Compile Include="Job.Framework.Common\WinServiceHelper.cs" />
+    <Compile Include="Job.Framework.Config\2-Implements\AppConfigElementCollection.cs" />
+    <Compile Include="Job.Framework.Config\2-Implements\AppConfigSection.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\QueueSettings\QueueSettingsElement.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\QueueSettings\QueueSettingsSection.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\ConnectionStrings\ConnectionStringsElement.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\ConnectionStrings\ConnectionStringsSection.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\EmailConfigStrings\EmailConfigStringsElement.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\EmailConfigStrings\EmailConfigStringsSection.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\MemcachedSettings\MemcachedSettingsElement.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\MemcachedSettings\MemcachedSettingsSection.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\PassportSettings\PassportSettingsElement.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\PassportSettings\PassportSettingsSection.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\SmsConfigStrings\SmsConfigStringsElement.cs" />
+    <Compile Include="Job.Framework.Config\3-Importants\SmsConfigStrings\SmsConfigStringsSection.cs" />
+    <Compile Include="Job.Framework.Config\2-Implements\AppConfigManager.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\IAggregateRoot.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\ICommand.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\ICommandBus.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\ICommandHandler.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\ICommandSendResult.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\ICommandContext.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\IEvent.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\IEventBus.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\IEventHandler.cs" />
+    <Compile Include="Job.Framework.Cqrs\1-Interfaces\IHandle.cs" />
+    <Compile Include="Job.Framework.Cqrs\2-Implements\AggregateRoot.cs" />
+    <Compile Include="Job.Framework.Cqrs\2-Implements\Command.cs" />
+    <Compile Include="Job.Framework.Cqrs\2-Implements\CommandBus.cs" />
+    <Compile Include="Job.Framework.Cqrs\2-Implements\CommandResult.cs" />
+    <Compile Include="Job.Framework.Cqrs\2-Implements\CommandContext.cs" />
+    <Compile Include="Job.Framework.Cqrs\2-Implements\Event.cs" />
+    <Compile Include="Job.Framework.Cqrs\2-Implements\EventBus.cs" />
+    <Compile Include="Job.Framework.Cqrs\3-Importants\MefComposition.cs" />
+    <Compile Include="Job.Framework.Extensions\System.Web.Mvc.cs" />
+    <Compile Include="Job.Framework\3-Importants\DbProvider.cs" />
+    <Compile Include="Job.Framework\3-Importants\DbTransaction.cs" />
+    <Compile Include="Job.Framework\2-Implements\1-Insert\DbInsertExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\1-Insert\DbInsert.cs" />
+    <Compile Include="Job.Framework\2-Implements\6-Count\DbCount.cs" />
+    <Compile Include="Job.Framework\2-Implements\6-Count\DbCountExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\2-Delete\DbDelete.cs" />
+    <Compile Include="Job.Framework\2-Implements\2-Delete\DbDeleteExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\3-Update\DbUpdate.cs" />
+    <Compile Include="Job.Framework\2-Implements\3-Update\DbUpdateExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\4-Select\DbSelect.cs" />
+    <Compile Include="Job.Framework\2-Implements\4-Select\DbSelectExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\5-Query\DbQuery.cs" />
+    <Compile Include="Job.Framework\2-Implements\5-Query\DbQueryExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\7-DbContext\DbContext.cs" />
+    <Compile Include="Job.Framework\2-Implements\7-DbContext\DbContextExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\7-DbContext\DbContextOperate.cs" />
+    <Compile Include="Job.Framework\2-Implements\7-DbContext\DbContextOperateExtensions.cs" />
+    <Compile Include="Job.Framework\2-Implements\7-DbContext\DbContextResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Job.Framework.Config\1-Interfaces\" />
+    <Folder Include="Job.Framework\1-Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Job.Framework.Extensions\Job.Framework.Queue.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
